@@ -1,21 +1,21 @@
-import './style.css'
+import './style.css';
 
-let taskArr = [{
-  description: "Do 30 min cardio",
+const taskArr = [{
+  description: 'Do 30 min cardio',
   completed: false,
-  index: 1
+  index: 1,
 }, {
-  description: "Meditate 10 min",
+  description: 'Meditate 10 min',
   completed: true,
-  index: 2
+  index: 2,
 }, {
-  description: "Do dinner",
+  description: 'Do dinner',
   completed: false,
-  index: 3
+  index: 3,
 }];
-  
+
 function displayTask() {
-  for (let i = 0; i < taskArr.length; i++) {
+  for (let i = 0; i < taskArr.length; i += i) {
     const cont = document.getElementById('main-container');
     const itemContainer = document.createElement('div');
     itemContainer.setAttribute('class', 'item-container');
@@ -30,13 +30,13 @@ function displayTask() {
     squareContainer.appendChild(item);
     itemContainer.appendChild(squareContainer);
     const dotsContainer = document.createElement('div');
-    dotsContainer.setAttribute('class', 'dots-container')
+    dotsContainer.setAttribute('class', 'dots-container');
     const iconTwo = document.createElement('i');
     iconTwo.setAttribute('class', 'fas fa-ellipsis-v');
     dotsContainer.appendChild(iconTwo);
     itemContainer.appendChild(dotsContainer);
     cont.appendChild(itemContainer);
-  };
+  }
   if (taskArr.length > 0) {
     const cont = document.getElementById('main-container');
     const itemContainer = document.createElement('div');
@@ -48,5 +48,5 @@ function displayTask() {
     cont.appendChild(itemContainer);
   }
 }
-  
+
 document.addEventListener('DOMContentLoaded', displayTask);
