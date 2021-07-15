@@ -35,6 +35,18 @@ body {
 .title-cont {
   border: none;
   justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+}
+
+.input-container,
+.clear-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid grey;
 }
 
 .item {
@@ -58,11 +70,14 @@ body {
   color: darkgray;
 }
 
-.fa-square,
 .fa-ellipsis-v {
   padding: 0 20px;
   font-size: 18px;
   color: #b5b9b7;
+}
+
+input[type=checkbox]{
+  margin: 10px 15px;
 }
 
 #clear {
@@ -71,4 +86,12 @@ body {
   background-color: #e9eaea;
   color: #a9aeab;
   border-radius: 0 0 5px 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.drag-over {
+  border: solid 2px black;
 }
